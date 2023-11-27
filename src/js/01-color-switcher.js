@@ -24,8 +24,11 @@ function stopColorSwitch() {
   stopButton.disabled = true;
 
   clearInterval(intervalId);
-  body.style.backgroundColor = '';
 }
 
 startButton.addEventListener('click', startColorSwitch);
 stopButton.addEventListener('click', stopColorSwitch);
+
+document.addEventListener('DOMContentLoaded', function () {
+  stopButton.disabled = true;
+});
